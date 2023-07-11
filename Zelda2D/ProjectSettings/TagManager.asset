@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Enemy1
+  - Enemy2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Background
+  - Player
+  - Trees
+  - Pole
+  - Bridge
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3384308505
+    locked: 0
+  - name: Trees
+    uniqueID: 2820445463
+    locked: 0
+  - name: Pole
+    uniqueID: 957800323
+    locked: 0
+  - name: Bridge
+    uniqueID: 1912921835
+    locked: 0
+  - name: Player
+    uniqueID: 4033020519
+    locked: 0
