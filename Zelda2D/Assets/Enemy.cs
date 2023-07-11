@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     public EnemyCounter enemyManager;
-
+    public string enemyType;
     [SerializeField]private GameObject player;
     public int damage = 1;
     public PlayerController playerController;
@@ -14,24 +14,23 @@ public class Enemy : MonoBehaviour
     private float distance;
     public int maxHealth = 4;
     public int health;
-    private bool Death;
+    private bool Death = false;
     private int life;
     private Animator animator;
     private static int aliveEnemies = 0;
 
     void Start()
-    {  
+    {   enemyManager = FindObjectOfType<EnemyCounter>();
         animator = GetComponent<Animator>();
         health=maxHealth;
-        Death = false;
         aliveEnemies=3;
-        enemyManager = FindObjectOfType<EnemyCounter>();
     }
     public void TakeDamage(int damage)
     {
         health -= damage;
         
         if (health == 0){
+             enemyManager.EnemyKilled(enemyType);
             animator.SetBool("Death", true);
             StartCoroutine(DestroyAfterAnimation());
             aliveEnemies = aliveEnemies - 1;
@@ -59,9 +58,5 @@ public class Enemy : MonoBehaviour
         } 
     }
 
- public void Die()
-    {
-        
-        enemyManager.EnemyKilled();
-    }
+
 }
